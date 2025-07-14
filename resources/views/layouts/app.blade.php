@@ -18,7 +18,7 @@
                         <span class="text-xl font-bold">University CMS</span>
                     </a>
                 </div>
-                
+
                 @auth
                 <div class="flex items-center space-x-4">
                     <a href="{{ route('dashboard') }}" class="hover:text-blue-200 transition-colors">
@@ -43,15 +43,14 @@
                             <i class="fas fa-plus mr-1"></i>Add Result
                         </a>
                     @endif
-                    
+
                     <div class="relative group">
                         <button class="flex items-center space-x-1 hover:text-blue-200 transition-colors">
                             <i class="fas fa-user"></i>
                             <span>{{ auth()->user()->name }}</span>
                             <i class="fas fa-chevron-down text-xs"></i>
                         </button>
-                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                        <div class="absolute top-4 right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button type="submit" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
